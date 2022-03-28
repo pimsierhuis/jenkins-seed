@@ -1,6 +1,9 @@
 pipeline {
-  agent any
-
+  agent {
+    dockerfile {
+      dir 'build'
+    }
+  }
 
   stages {
     stage('Run seed script') {
